@@ -1,20 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="D&D: Rogue: prepara tu aventura, reúne a tu grupo y descubre criaturas fantásticas.">
+    <title>D&D: Rogue — Inicio</title>
+    <link rel="stylesheet" href="Index.css">
 </head>
 <body>
-    <header>
-        <nav>
-                <p><a href="index.html">Inicio</a> <a href="juego.html">Juego</a><a href="acerca.html">Acerca de</a></p>
+    <header class="site-header">
+        <a class="brand" href="#inicio" aria-label="D&D: Rogue, inicio">
+            <span class="brand-mark" aria-hidden="true">✦</span>
+            <span>D&D <span class="brand-light">: Rogue</span></span>
+        </a>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="#dm">DM</a>
+            <a href="#multijugador">Multijugador</a>
+            <a href="#info">Info</a>
+            <a href="#monstruos">Manual de monstruos</a>
         </nav>
     </header>
-    <h1>Bienvenido a D&D: Roguelike</h1>
-    <button onclick="alert(ClaseRandom())">Jugar</button>
 
-    <script src="script.js"></script>
+    <main>
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <p class="eyebrow">UNA AVENTURA PROCEDURAL NUNCA ANTES VISTA</p>
+                <h1 id="hero-title">El destino<span>está en tus manos.</span></h1>
+                <p class="hero-copy">Reúne a tu grupo, prepara tus dados y adéntrate en un mundo lleno de desafíos, criaturas y grandes historias.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#multijugador">Explorar modos <span aria-hidden="true">→</span></a>
+                    <a class="text-link" href="#monstruos">Descubrir criaturas</a>
+                </div>
+            </div>
+            <div class="hero-seal" aria-hidden="true"><span>✦</span><small>FORJA<br>TU LEYENDA</small></div>
+            <a class="scroll-cue" href="#modos">DESCIENDE PARA EXPLORAR <span aria-hidden="true">↓</span></a>
+        </section>
+
+        <section class="intro-section" id="modos" aria-labelledby="modes-title">
+            <p class="eyebrow">MODOS DE JUEGOS</p>
+            <h2 id="modes-title">Partidas infinitas, nunca 2 iguales</h2>
+            <p class="section-lead">Tanto si quieres dirigir la partida como lanzarte a la aventura con tu grupo, aquí comienza todo.</p>
+
+            <div class="feature-grid">
+                <article class="feature-card" id="dm">
+                    <span class="card-icon" aria-hidden="true">♜</span>
+                    <p class="card-kicker">Usar la página como ayuda</p>
+                    <h3>DM local</h3>
+                    <p>Utiliza la pagina como referencia para ayudarte en la partida.</p>
+                    <a href="Partida/DM%20local/Plocal.html" class="card-link">Iniciar Partida Local <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="feature-card feature-card-highlight" id="multijugador">
+                    <span class="card-icon" aria-hidden="true">⚔</span>
+                    <p class="card-kicker">JUNTOS EN LA AVENTURA</p>
+                    <h3>Multijugador</h3>
+                    <p>Forma tu grupo, crea un personaje y enfrentaos a lo desconocido en equipo.</p>
+                    <a href="#info" class="card-link">Descubre cómo funciona <span aria-hidden="true">→</span></a>
+                </article>
+            </div>
+        </section>
+
+        <section class="about-section" id="info" aria-labelledby="info-title">
+            <div class="about-emblem" aria-hidden="true">✧</div>
+            <div>
+                <p class="eyebrow">SOBRE EL PROYECTO</p>
+                <h2 id="info-title">Rol clásico, espíritu roguelike.</h2>
+                <p>D&D: Rogue es un proyecto inspirado en las aventuras de rol de fantasía: crea tu héroe, toma decisiones y descubre qué te espera tras cada encuentro.</p>
+                <a class="text-link" href="#monstruos">Echa un vistazo al bestiario <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section class="bestiary-section" id="monstruos" aria-labelledby="bestiary-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">BESTIARIO</p>
+                    <h2 id="bestiary-title">Manual de monstruos</h2>
+                </div>
+                <p>Algunas de las criaturas que podrían cruzarse en tu camino.</p>
+            </div>
+            <div class="monster-grid">
+                <article class="monster-card"><span aria-hidden="true">🐉</span><h3>Dragón</h3><p>Una presencia imponente que domina los cielos.</p></article>
+                <article class="monster-card"><span aria-hidden="true">👁</span><h3>Espectro</h3><p>Un espíritu misterioso que acecha en la oscuridad.</p></article>
+                <article class="monster-card"><span aria-hidden="true">🐺</span><h3>Lobo</h3><p>Un cazador astuto que rara vez viaja solo.</p></article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">✦</span><span>D&D <span class="brand-light">: Rogue</span></span></a>
+        <p>Tu próxima aventura empieza con una decisión.</p>
+    </footer>
 </body>
 </html>

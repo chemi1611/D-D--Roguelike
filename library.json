@@ -1,0 +1,49 @@
+{
+    "configuracion": {
+        "opcionesPorCategoria": 3,
+        "maximoHistorial": 10,
+        "piezasDeOroIniciales": 25,
+        "claveHistorial": "dndRoguelikeLocalRolls"
+    },
+    "clases": [
+        "Bárbaro",
+        "Bardo",
+        "Brujo",
+        "Clérigo",
+        "Druida",
+        "Explorador",
+        "Guerrero",
+        "Hechicero",
+        "Mago",
+        "Monje",
+        "Paladín",
+        "Pícaro",
+        "Blood Hunter"
+    ],
+    "razas": [
+        "Dracónido",
+        "Enano",
+        "Elfo",
+        "Gnomo",
+        "Humano",
+        "Mediano",
+        "Semielfo",
+        "Semiorco",
+        "Tiefling"
+    ],
+    "trasfondos": [
+        "Acólito",
+        "Artesano gremial",
+        "Artista",
+        "Charlatán",
+        "Criminal",
+        "Ermitaño",
+        "Héroe del pueblo",
+        "Marinero",
+        "Noble",
+        "Forastero",
+        "Sabio",
+        "Soldado",
+        "Huérfano"
+    ]
+}

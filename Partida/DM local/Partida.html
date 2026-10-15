@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestiona los diez pisos de tu aventura de D&D: Roguelike.">
+    <title>Partida — D&amp;D: Rogue</title>
+    <link rel="stylesheet" href="partida.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="../../index.html"><span aria-hidden="true">✦</span> D&amp;D <small>: Rogue</small></a>
+        <div class="header-actions">
+            <a class="back-link" href="Plocal.html">← Preparación DM</a>
+            <button class="utility-button" id="save-game" type="button">Guardar partida</button>
+            <button class="utility-button" id="load-game-button" type="button">Cargar archivo</button>
+            <input id="load-game-file" type="file" accept="application/json,.json" hidden>
+        </div>
+    </header>
+
+    <main class="game-wrap">
+        <section class="welcome-row">
+            <div>
+                <p class="eyebrow">GESTIÓN DE AVENTURA · 10 PISOS</p>
+                <h1>La Torre Roguelike</h1>
+                <p class="lead">Tiradas, mapa, cronómetro, recompensas, tienda y eventos en un solo lugar.</p>
+            </div>
+            <button class="new-game-button" id="new-game" type="button">Nueva partida</button>
+        </section>
+
+        <p class="save-status" id="save-status" role="status" aria-live="polite">La partida se guarda automáticamente en este navegador.</p>
+
+        <section class="run-dashboard" aria-label="Estado actual de la partida">
+            <div class="floor-indicator"><span class="eyebrow">PISO ACTUAL</span><strong id="floor-number">1 / 10</strong></div>
+            <div class="stage-indicator"><span class="eyebrow">FASE</span><strong id="stage-name">Preparación</strong></div>
+            <div class="timer-panel"><span class="eyebrow">TIEMPO EN EL PISO</span><strong id="floor-timer">00:00:00</strong><button class="timer-button" id="timer-toggle" type="button" disabled>Iniciar temporizador</button></div>
+        </section>
+
+        <section class="panel start-panel" id="start-panel">
+            <p class="eyebrow">PRÓXIMO PASO</p>
+            <h2>Preparar el piso <span id="start-floor-number">1</span></h2>
+            <p>Tira en la tabla de encuentros, asigna un mapa placeholder y comprueba si contiene un evento.</p>
+            <button class="primary-button" id="roll-floor" type="button">Tirar para iniciar el piso 1 <span aria-hidden="true">→</span></button>
+        </section>
+
+        <section class="panel encounter-panel" id="encounter-panel" hidden>
+            <div class="section-title"><div><p class="eyebrow">PISO <span id="encounter-floor-number">1</span> · EXPLORACIÓN</p><h2>Encuentro y mapa</h2></div><span class="roll-badge" id="encounter-roll">d6: —</span></div>
+            <div class="result-grid">
+                <article class="result-box encounter-result-box"><span class="result-label">ENCUENTRO</span><strong id="encounter-result">—</strong><div class="creature-reference-list" id="creature-reference-list" aria-label="Criaturas del encuentro"></div></article>
+                <article class="result-box"><span class="result-label">MAPA (d10)</span><strong id="map-result">—</strong><p class="muted" id="map-description"></p></article>
+                <article class="result-box event-check-box"><span class="result-label">¿HAY EVENTO EN EL MAPA?</span><strong id="map-event-result">—</strong><p class="muted" id="map-event-detail"></p></article>
+            </div>
+            <p class="placeholder-note" id="map-rule-note"></p>
+            <div class="timer-reminder">Inicia el temporizador cuando comience el encuentro; se detendrá al cerrar el piso.</div>
+            <button class="primary-button" id="finish-encounter" type="button">Encuentro terminado · Ver recompensas <span aria-hidden="true">→</span></button>
+        </section>
+
+        <section class="panel rewards-panel" id="rewards-panel" hidden>
+            <div class="section-title"><div><p class="eyebrow">PISO <span id="reward-floor-number">1</span> · ENCUENTRO SUPERADO</p><h2>Recompensas y progresión</h2></div></div>
+            <div class="reward-grid" id="reward-grid"></div>
+
+            <section class="level-up-section" id="level-up-section">
+                <p class="eyebrow">PROGRESIÓN</p>
+                <h3 id="level-up-title">Subida de nivel</h3>
+                <p id="level-up-message"></p>
+                <div id="class-roll-area" hidden>
+                    <button class="secondary-button" id="roll-classes" type="button">Sortear 3 clases posibles</button>
+                    <div class="choice-grid" id="class-choices"></div>
+                    <p class="selected-choice" id="selected-class"></p>
+                    <div class="history-area" id="class-history-area" hidden>
+                        <h4>Historial de sorteos de clase</h4>
+                        <ol id="class-history-list"></ol>
+                    </div>
+                </div>
+            </section>
+
+            <section class="shop-section">
+                <div class="section-title"><div><p class="eyebrow">TIENDA DEL PISO <span id="shop-floor-number">1</span></p><h3>Tienda y ofertas especiales</h3></div></div>
+                <h4>Catálogo general</h4>
+                <div class="shop-grid" id="standard-shop"></div>
+                <h4>Dos objetos especiales disponibles esta vez</h4>
+                <p class="muted">Tirada aleatoria sin repetir el mismo objeto en esta visita.</p>
+                <div class="shop-grid offer-grid" id="special-offers"></div>
+            </section>
+
+            <button class="primary-button" id="finish-shopping" type="button">Terminar compras · Tirar evento d20 <span aria-hidden="true">→</span></button>
+        </section>
+
+        <section class="panel event-panel" id="event-panel" hidden>
+            <p class="eyebrow">PISO <span id="event-floor-number">1</span> · DESPUÉS DE LA TIENDA</p>
+            <h2>Evento de la torre</h2>
+            <p>Cuando el grupo termine de comprar, tira 1d20 en la tabla de eventos. Los resultados siguen siendo placeholders hasta que añadas la tabla definitiva.</p>
+            <button class="primary-button" id="roll-event" type="button">Tirar evento (d20)</button>
+            <article class="event-result" id="event-result-card" hidden>
+                <span class="result-label" id="event-roll-label">RESULTADO: —</span>
+                <h3 id="event-result-name"></h3>
+                <p id="event-result-description"></p>
+            </article>
+
+            <section class="emblem-section" id="emblem-section" hidden>
+                <p class="eyebrow">EVENTO ESPECIAL · TRAS SUPERAR EL PISO 5</p>
+                <h3>Elige un emblema</h3>
+                <p>El grupo debe escoger uno de estos tres. La elección quedará guardada en la partida.</p>
+                <div class="choice-grid emblem-grid" id="emblem-choices"></div>
+                <p class="selected-choice" id="selected-emblem"></p>
+            </section>
+
+            <button class="primary-button" id="next-floor" type="button" hidden>Siguiente piso <span aria-hidden="true">→</span></button>
+            <button class="primary-button" id="finalize-run" type="button" hidden>Finalizar partida <span aria-hidden="true">✦</span></button>
+            <section class="run-complete" id="run-complete" hidden><span aria-hidden="true">✦</span><h3>¡Torre completada!</h3><p>Has llegado al final de los diez pisos. Descarga el estado si quieres conservar el resumen de la run.</p></section>
+        </section>
+
+        <details class="placeholder-details">
+            <summary>Ver / editar el estado de los placeholders</summary>
+            <p>Los diez mapas y los veinte resultados de evento placeholder están en <strong>partida-data.json</strong>.</p>
+        </details>
+    </main>
+    <dialog class="monster-dialog" id="monster-dialog" aria-labelledby="monster-dialog-title">
+        <div class="monster-dialog-header"><div><p class="eyebrow">BESTIARIO · D&amp;D 5.ª EDICIÓN</p><h2 id="monster-dialog-title">Statblock</h2></div><button class="dialog-close" id="close-monster-dialog" type="button" aria-label="Cerrar statblock">×</button></div>
+        <div class="monster-statblock" id="monster-statblock" aria-live="polite"></div>
+        <p class="statblock-source">Las imágenes se cargan desde 5e.tools. Los atributos y acciones del statblock proceden de D&amp;D 5e API (SRD 2014); puede no incluir criaturas de suplementos.</p>
+    </dialog>
+    <footer class="site-footer">El guardado automático vive en este navegador. Usa «Guardar partida» para descargar un JSON y «Cargar archivo» para restaurarlo.</footer>
+    <script src="partida.js"></script>
+</body>
+</html>

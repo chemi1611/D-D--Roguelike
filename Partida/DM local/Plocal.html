@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Genera propuestas aleatorias de personajes para tu partida de D&D 5e.">
+    <title>Preparar partida — D&amp;D: Roguelike</title>
+    <link rel="stylesheet" href="plocal.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="../../index.html"><span aria-hidden="true">✦</span> D&amp;D <small>: Roguelike</small></a>
+        <a class="back-link" href="../../index.html">← Volver al inicio</a>
+    </header>
+
+    <main class="page-wrap">
+        <section class="page-heading">
+            <p class="eyebrow">HERRAMIENTAS PARA EL DM</p>
+            <h1>Prepara la aventura</h1>
+            <p id="option-count-description">Cargando opciones de los catálogos oficiales del Manual del jugador de 2014…</p>
+        </section>
+
+        <button class="generate-button" id="generate-button" type="button" disabled>
+            <span aria-hidden="true">✧</span> Generar opciones aleatorias
+        </button>
+        <p class="library-status" id="library-status" role="status" aria-live="polite">Cargando configuración…</p>
+
+        <section class="results" id="results" aria-live="polite" aria-label="Opciones aleatorias">
+            <article class="result-card">
+                <div class="result-icon" aria-hidden="true">⚔</div>
+                <p class="eyebrow">01 · OFICIO</p>
+                <h2>Clases</h2>
+                <ol id="class-options"><li class="placeholder">Pulsa generar para descubrir opciones</li></ol>
+            </article>
+            <article class="result-card">
+                <div class="result-icon" aria-hidden="true">♙</div>
+                <p class="eyebrow">02 · ORIGEN</p>
+                <h2>Razas</h2>
+                <ol id="race-options"><li class="placeholder">Pulsa generar para descubrir opciones</li></ol>
+            </article>
+            <article class="result-card">
+                <div class="result-icon" aria-hidden="true">▤</div>
+                <p class="eyebrow">03 · HISTORIA</p>
+                <h2>Trasfondos</h2>
+                <ol id="background-options"><li class="placeholder">Pulsa generar para descubrir opciones</li></ol>
+            </article>
+        </section>
+
+        <aside class="gold-reminder">
+            <span class="coin" aria-hidden="true">PO</span>
+            <p><strong>Recordatorio para el DM</strong><br>Los jugadores empiezan con <b id="starting-gold">25 PO</b> (piezas de oro).</p>
+        </aside>
+
+        <section class="history-panel" id="history-panel" hidden aria-labelledby="history-title">
+            <div class="history-heading">
+                <div><p class="eyebrow">TUS TIRADAS RECIENTES</p><h2 id="history-title">Historial</h2></div>
+                <button class="clear-history" id="clear-history" type="button">Borrar historial</button>
+            </div>
+            <p class="empty-history" id="empty-history">Todavía no hay tiradas guardadas. Genera tus primeras opciones.</p>
+            <ol class="history-list" id="history-list"></ol>
+        </section>
+
+        <div class="bottom-actions">
+            <a class="start-button" href="Partida.html">Iniciar partida <span aria-hidden="true">→</span></a>
+            <button class="history-button" id="history-button" type="button" aria-expanded="false" aria-controls="history-panel">Historial <span aria-hidden="true">▾</span></button>
+        </div>
+    </main>
+
+    <footer class="site-footer">Las opciones se guardan en este navegador · Reglas base de D&amp;D 5e (2014)</footer>
+    <script src="plocal.js"></script>
+</body>
+</html>
