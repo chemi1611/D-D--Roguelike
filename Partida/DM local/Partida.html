@@ -22,8 +22,8 @@
         <section class="welcome-row">
             <div>
                 <p class="eyebrow">GESTIÓN DE AVENTURA · 10 PISOS</p>
-                <h1>La Torre Roguelike</h1>
-                <p class="lead">Tiradas, mapa, cronómetro, recompensas, tienda y eventos en un solo lugar.</p>
+                <h1>D&D: Rogue</h1>
+                <p class="lead">Todo en un lugar</p>
             </div>
             <button class="new-game-button" id="new-game" type="button">Nueva partida</button>
         </section>
@@ -38,9 +38,9 @@
 
         <section class="panel start-panel" id="start-panel">
             <p class="eyebrow">PRÓXIMO PASO</p>
-            <h2>Preparar el piso <span id="start-floor-number">1</span></h2>
-            <p>Tira en la tabla de encuentros, asigna un mapa placeholder y comprueba si contiene un evento.</p>
-            <button class="primary-button" id="roll-floor" type="button">Tirar para iniciar el piso 1 <span aria-hidden="true">→</span></button>
+            <h2>Siguiente Piso -> <span id="start-floor-number">1</span></h2>
+            <p>Recuerda guardar tu progreso de vez en cuando.</p>
+            <button class="primary-button" id="roll-floor" type="button">Iniciar</button>
         </section>
 
         <section class="panel encounter-panel" id="encounter-panel" hidden>
@@ -110,10 +110,12 @@
             <section class="run-complete" id="run-complete" hidden><span aria-hidden="true">✦</span><h3>¡Torre completada!</h3><p>Has llegado al final de los diez pisos. Descarga el estado si quieres conservar el resumen de la run.</p></section>
         </section>
 
-        <details class="placeholder-details">
+        
+        
+        <!--   <details class="placeholder-details">
             <summary>Ver / editar el estado de los placeholders</summary>
             <p>Los diez mapas y los veinte resultados de evento placeholder están en <strong>partida-data.json</strong>.</p>
-        </details>
+        </details> -->
     </main>
     <dialog class="monster-dialog" id="monster-dialog" aria-labelledby="monster-dialog-title">
         <div class="monster-dialog-header"><div><p class="eyebrow">BESTIARIO · D&amp;D 5.ª EDICIÓN</p><h2 id="monster-dialog-title">Statblock</h2></div><button class="dialog-close" id="close-monster-dialog" type="button" aria-label="Cerrar statblock">×</button></div>

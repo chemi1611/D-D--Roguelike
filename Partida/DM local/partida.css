@@ -48,7 +48,7 @@ h1 { margin: .4rem 0 .3rem; font-size: clamp(2.45rem, 6vw, 4rem); font-weight: 4
 .primary-button:disabled, .secondary-button:disabled { cursor: not-allowed; opacity: .5; }
 .section-title { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.3rem; }
 .section-title h2, .section-title h3 { margin: .25rem 0 0; font-size: 1.8rem; font-weight: 400; }
-.roll-badge { padding: .45rem .7rem; border: 1px solid rgba(215, 173, 98, .4); color: var(--gold); font: .8rem Arial, sans-serif; }
+.roll-badge { padding: .45rem .7rem; border: 1px solid rgba(215, 173, 98, .4); color: var(--gold); font: .8rem Arial, sans-serif; display: none;}
 .result-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; }
 .result-box { min-height: 140px; padding: 1.1rem; border: 1px solid var(--line); background: rgba(18, 17, 15, .48); }
 .result-label { display: block; margin-bottom: .5rem; color: var(--gold); font: 700 .65rem Arial, sans-serif; letter-spacing: .1em; }
@@ -167,4 +167,8 @@ h1 { margin: .4rem 0 .3rem; font-size: clamp(2.45rem, 6vw, 4rem); font-weight: 4
     .header-actions { gap: .35rem; }
     .back-link { width: 100%; margin: 0 0 .25rem; }
     .utility-button { padding: .5rem; font-size: .72rem; }
+}
+
+#start-floor-number {
+    font-size: 1.5em;
 }
