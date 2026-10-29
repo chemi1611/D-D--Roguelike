@@ -16,16 +16,16 @@
     {"encounters": ["Adult Red Dragon", "Lich", "Beholder", "Mummy lord", "Demilich", "Archmage y 4 guards", "2 frost giants", "7 hobgoblin captain"], "rewards": {"general": null, "finalBlow": null, "epicAction": null, "note": "La tabla del Excel no contiene los importes de recompensa del nivel 10."}, "offers": [{"name":"Arma +2","price":"1500 PO"},{"name":"Armadura +2","price":"1500 PO"},{"name":"Armadura +1","price":"400 PO"},{"name":"Amuleto de constitución","price":"800 PO"},{"name":"+1 extra level","price":"2000 PO"},{"name":"Bendición de la torre","price":"1500 PO"}]}
   ],
   "maps": [
-    {"name":"Mapa placeholder 1","description":"Reemplaza por el mapa real del piso 1."},
-    {"name":"Mapa placeholder 2","description":"Reemplaza por el mapa real del piso 2."},
-    {"name":"Mapa placeholder 3","description":"Reemplaza por el mapa real del piso 3."},
-    {"name":"Mapa placeholder 4","description":"Reemplaza por el mapa real del piso 4."},
-    {"name":"Mapa placeholder 5","description":"Reemplaza por el mapa real del piso 5."},
-    {"name":"Mapa placeholder 6","description":"Reemplaza por el mapa real del piso 6."},
-    {"name":"Mapa placeholder 7","description":"Reemplaza por el mapa real del piso 7."},
-    {"name":"Mapa placeholder 8","description":"Reemplaza por el mapa real del piso 8."},
-    {"name":"Mapa placeholder 9","description":"Reemplaza por el mapa real del piso 9."},
-    {"name":"Mapa placeholder 10","description":"Reemplaza por el mapa real del piso 10."}
+    {"name":"MAPA 1","description":"Reemplaza por el mapa real del piso 1."},
+    {"name":"MAPA 2","description":"Reemplaza por el mapa real del piso 2."},
+    {"name":"MAPA 3","description":"Reemplaza por el mapa real del piso 3."},
+    {"name":"MAPA 4","description":"Reemplaza por el mapa real del piso 4."},
+    {"name":"MAPA 5","description":"Reemplaza por el mapa real del piso 5."},
+    {"name":"MAPA 6","description":"Reemplaza por el mapa real del piso 6."},
+    {"name":"MAPA 7","description":"Reemplaza por el mapa real del piso 7."},
+    {"name":"MAPA 8","description":"Reemplaza por el mapa real del piso 8."},
+    {"name":"MAPA 9","description":"Reemplaza por el mapa real del piso 9."},
+    {"name":"MAPA 10","description":"Reemplaza por el mapa real del piso 10."}
   ],
   "events": [
     {"name":"Evento placeholder 1","description":"Añade aquí la descripción del evento 1."},{"name":"Evento placeholder 2","description":"Añade aquí la descripción del evento 2."},{"name":"Evento placeholder 3","description":"Añade aquí la descripción del evento 3."},{"name":"Evento placeholder 4","description":"Añade aquí la descripción del evento 4."},{"name":"Evento placeholder 5","description":"Añade aquí la descripción del evento 5."},{"name":"Evento placeholder 6","description":"Añade aquí la descripción del evento 6."},{"name":"Evento placeholder 7","description":"Añade aquí la descripción del evento 7."},{"name":"Evento placeholder 8","description":"Añade aquí la descripción del evento 8."},{"name":"Evento placeholder 9","description":"Añade aquí la descripción del evento 9."},{"name":"Evento placeholder 10","description":"Añade aquí la descripción del evento 10."},{"name":"Evento placeholder 11","description":"Añade aquí la descripción del evento 11."},{"name":"Evento placeholder 12","description":"Añade aquí la descripción del evento 12."},{"name":"Evento placeholder 13","description":"Añade aquí la descripción del evento 13."},{"name":"Evento placeholder 14","description":"Añade aquí la descripción del evento 14."},{"name":"Evento placeholder 15","description":"Añade aquí la descripción del evento 15."},{"name":"Evento placeholder 16","description":"Añade aquí la descripción del evento 16."},{"name":"Evento placeholder 17","description":"Añade aquí la descripción del evento 17."},{"name":"Evento placeholder 18","description":"Añade aquí la descripción del evento 18."},{"name":"Evento placeholder 19","description":"Añade aquí la descripción del evento 19."},{"name":"Evento placeholder 20","description":"Añade aquí la descripción del evento 20."}
